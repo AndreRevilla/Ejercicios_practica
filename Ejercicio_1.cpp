@@ -1,39 +1,39 @@
 #include <iostream>
-using namespace std;
+#define array_size 10
+// Cambiar el nombre de esPrimo a is_prime_number
+// Agregar una macro del tamanio del array
+// Cambiar fors en un ++i
+// Cambiar el nombre del i no es coherente
+// Variables en ingles
 
-bool esPrimo(int num){
-    if (num<=1){
+bool is_prime_number(int number){
+    if (number<=1){
         return false;
     }
-
-    int i = 2;
-    while(i<num){
-        if (num % i == 0){
+    for (int count{2}; count<number; ++count){
+        if (number % count == 0){
             return false;
         }
-        i++;
     }
     return true;
 }
 
-int cantidadPrimos(int arr[], int size){
-    
-    int cantidad{0};
-    
-    for (int i{0}; i<size; i++){
-        if (esPrimo(arr[i])){
-            cantidad++;
+int prime_number_qty(int numbers[]){
+    int qty{0};    
+    for (int index{0}; index<array_size; ++index){
+        if (is_prime_number(numbers[index])){
+            qty++;
         }
     }
-    return cantidad;
+    return qty;
 }
 
-int main(){
-    int arr[10];
-
-    for (int i{0};i<10;i++){
-        arr[i]=i;
+int main(**args){
+    int numbers[array_size];
+    for (int index{0};index<array_size;++index){
+        numbers[index]=i;
     }
-
-    cout<<cantidadPrimos(arr,10);
+    int result{prime_number_qty(arr)}
+    std::cout<<result;
+    return result
 }
