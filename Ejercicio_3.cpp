@@ -1,25 +1,21 @@
 #include <iostream>
 #include <vector>
-using namespace std;
+#define array_size 10
 
-void Convertir_A_Cuadrados(vector<int> &num, int size){
-	for (int &item : num){
-		item *= item;
+void convert_to_squares(std::vector<int> &numbers){
+	for (int &number : numbers){
+		number *= number;
 	}
 }
 
 int main() {
-	vector<int> num(10);
-	
-	for(int i{0};i<10;i++){
-		num[i]=i;
+	std::vector<int> num(array_size);
+	for(int index{0};index<array_size;++index){
+		num[index]=index;
 	}
-	
-	Convertir_A_Cuadrados(num,10);
-	
-	for(int i{0};i<10;i++){
-		cout<<num[i]<<" , ";
+	convert_to_squares(num);
+	for(int index{0};index<array_size;++index){
+		cout<<num[index]<<" , ";
 	}
-	
-	return 0;
+	return true;
 }

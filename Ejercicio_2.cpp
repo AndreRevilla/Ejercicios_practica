@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 #define ascci_a 97
 #define ascci_z 122
 #define ascci_A 65

@@ -31,7 +31,7 @@ int prime_number_qty(int numbers[]){
 int main(**args){
     int numbers[array_size];
     for (int index{0};index<array_size;++index){
-        numbers[index]=i;
+        numbers[index]=index;
     }
     int result{prime_number_qty(arr)}
     std::cout<<result;
